@@ -75,6 +75,7 @@ source "qemu" "rhel9_0" {
   net_device        = "virtio-net"
   disk_interface    = "virtio"
   disk_size         = "5000M"
+  headless          = true
 }
 
 build {
