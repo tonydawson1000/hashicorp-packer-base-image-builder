@@ -48,7 +48,7 @@ variable "rhel_9_0_shutdown_command" {
 
 variable "rhel_9_0_hyperv_switch_name" {
   type    = string
-  default = "packer_builder"
+  default = "Default Switch"
 }
 variable "rhel_9_0_hyperv_generation" {
   type    = number
