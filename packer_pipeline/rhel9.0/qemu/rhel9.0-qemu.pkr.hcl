@@ -69,6 +69,7 @@ source "qemu" "rhel9_0" {
   http_directory    = var.rhel_9_0_http_directory
   shutdown_command  = var.rhel_9_0_shutdown_command
 
+  qemu_binary       = "qemu-kvm"
   accelerator       = "kvm"
   format            = "qcow2"
   net_device        = "virtio-net"
@@ -77,7 +78,7 @@ source "qemu" "rhel9_0" {
 }
 
 build {
-  name = "Hyper-V Builder"
+  name = "KVM / QEMU Builder"
 
   sources = ["source.qemu.rhel9_0"]
 }
