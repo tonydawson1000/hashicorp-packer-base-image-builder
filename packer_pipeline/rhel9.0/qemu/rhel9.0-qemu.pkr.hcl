@@ -73,9 +73,13 @@ source "qemu" "rhel9_0" {
   accelerator       = "kvm"
   format            = "qcow2"
   net_device        = "virtio-net"
-  disk_interface    = "virtio"
-  disk_size         = "5000M"
   headless          = true
+
+  disk_cache       = "none"
+  disk_compression = true
+  disk_discard     = "unmap"
+  disk_interface   = "virtio"
+  disk_size        = "40000"
 }
 
 build {
